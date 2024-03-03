@@ -1,0 +1,13 @@
+{
+    "BNBUSDT": "SHORT",
+    "OMGUSDT": "SHORT",
+    "DOGEUSDT": "SHORT",
+    "REEFUSDT": "SHORT",
+    "AUDIOUSDT": "SHORT",
+    "PEOPLEUSDT": "LONG",
+    "WOOUSDT": "SHORT",
+    "TLMUSDT": "SHORT",
+    "BSVUSDT": "LONG",
+    "POLYXUSDT": "SHORT",
+    "TIAUSDT": "LONG"
+}
