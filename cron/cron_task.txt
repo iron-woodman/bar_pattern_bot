@@ -1,2 +1,3 @@
 #* * * * * cd /usr/local/bin/bot/multi_signals_binance_bot/cron && python3 cron_test.py
-10 0 * * * cd /usr/local/bin/bot/multi_signals_binance_bot && python3 avg_volumes_updater.py
+04 0 * * * cd /usr/local/bin/bot/bar_pattern_bot && python3 main.py
+09 0 * * * cd /usr/local/bin/bot/bar_pattern_bot && python3 send_signal.py

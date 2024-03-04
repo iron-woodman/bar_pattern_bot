@@ -1,7 +1,6 @@
 ## -*- coding: utf-8 -*-
 from binance import Client
 import src.logger as custom_logging
-import logging
 from src.config_handler import BINANCE_API_KEY, BINANCE_Secret_KEY
 
 

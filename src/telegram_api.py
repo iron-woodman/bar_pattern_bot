@@ -1,6 +1,5 @@
 ## -*- coding: utf-8 -*-
 import requests
-from datetime import datetime
 from time import sleep
 import src.logger as custom_logging
 

@@ -8,7 +8,7 @@ import src.logger as custom_logging
 from src.config_handler import TIMEFRAMES, BINANCE_API_KEY, BINANCE_Secret_KEY
 
 
-THREAD_CNT = 2  # 3 потока на ядро
+THREAD_CNT = 1  # 3 потока на ядро
 
 
 def check_history_bars_for_pattern(pair, bars: list) -> str:
@@ -62,7 +62,7 @@ def load_history_bars(task):
         result['id'] = pair
         for timeframe in all_timeframes:
             if timeframe == '1d':
-                st_time = "3 day ago UTC"
+                st_time = "4 day ago UTC"
             else:
                 print('Unknown timeframe:', timeframe)
                 custom_logging.error(f'Load history bars error: unknown timeframe "{timeframe}"')
@@ -106,7 +106,8 @@ def load_futures_history_bars_end(responce_list):
         with open(f"signals/{datetime.date.today().isoformat()}.txt", 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4, separators=(',', ': '))
             print('History bars data  stored to file.')
-            custom_logging.info('History bars data  stored to file.')
+            custom_logging.info(f'New signals data  stored to file "signals/{datetime.date.today().isoformat()}.txt".')
+            custom_logging.info(f'**************************************************************************************')
     except Exception as e:
         print("load_futures_history_bars_end exception:", e)
         custom_logging.error(f'load_futures_history_bars_end exception: {e}')
@@ -126,6 +127,6 @@ if __name__ == '__main__':
             pool.close()
             pool.join()
     except Exception as ex:
-        print("update_avg_volumes exception:", ex)
-        custom_logging.error(f"update_avg_volumes exception: {ex}")
+        print("Load history bars exception:", ex)
+        custom_logging.error(f"Load history bars exception: {ex}")
 

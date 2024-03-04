@@ -1,9 +1,7 @@
 {
     "COMPUSDT": "LONG",
-    "DOGEUSDT": "SHORT",
-    "STMXUSDT": "SHORT",
+    "FLMUSDT": "SHORT",
     "PEOPLEUSDT": "LONG",
     "WAXPUSDT": "LONG",
-    "MBLUSDT": "LONG",
-    "OMUSDT": "SHORT"
+    "MBLUSDT": "LONG"
 }
