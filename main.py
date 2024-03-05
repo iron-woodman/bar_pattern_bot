@@ -116,7 +116,7 @@ def load_futures_history_bars_end(responce_list):
 
 if __name__ == '__main__':
     futures_list = load_futures_list()
-    print('Кол-во фьючерсов:', len(futures_list))
+    print('Futures count:', len(futures_list))
     tasks = []
     try:
         custom_logging.info('Gathering history candles data...')
