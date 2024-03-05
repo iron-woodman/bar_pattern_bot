@@ -1,0 +1,19 @@
+{
+    "TRBUSDT": "LONG",
+    "LINAUSDT": "LONG",
+    "IOTXUSDT": "LONG",
+    "C98USDT": "LONG",
+    "CELOUSDT": "LONG",
+    "SPELLUSDT": "LONG",
+    "LUNA2USDT": "LONG",
+    "FETUSDT": "LONG",
+    "ASTRUSDT": "LONG",
+    "AGIXUSDT": "LONG",
+    "IDUSDT": "LONG",
+    "YGGUSDT": "LONG",
+    "DODOXUSDT": "LONG",
+    "CYBERUSDT": "LONG",
+    "BICOUSDT": "LONG",
+    "BIGTIMEUSDT": "LONG",
+    "MAVIAUSDT": "LONG"
+}
