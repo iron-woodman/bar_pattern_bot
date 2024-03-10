@@ -23,7 +23,7 @@ if __name__ == "__main__":
         signal_str = ''
         while len(signal_data) > 0:
             signal = signal_data.popitem()
-            signal_str += f'{signal[0]}: {signal[1]}\n\n'
+            signal_str += f'{signal[0]}: {signal[1]}\n'
             if len(signal_str) > 4000:# размер сообщения близок к максимальному => отправляем
                 send_signal(signal_data, TLG_TOKEN, TLG_CHANNEL_ID)
                 time.sleep(1)

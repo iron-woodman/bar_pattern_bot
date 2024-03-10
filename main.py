@@ -18,7 +18,7 @@ def check_history_bars_for_pattern(pair, bars: list) -> str:
     :return:
     """
     if len(bars) < 3:
-        print(f'{pair}:кол-во баров = {len(bars)}.')
+        print(f'{pair}: Bar count = {len(bars)}.')
         return ""
     _time = []
     close = []
@@ -32,15 +32,15 @@ def check_history_bars_for_pattern(pair, bars: list) -> str:
         volume.append(float(bar[5]))
 
     # проверяем значения на паттерны
-    if close[2] > close[1] > close[0] and volume[2] < volume[1] < volume[0]:
+    if close[2] > close[1] > close[0] and volume[2] < volume[1]:
         # цена 2 дня росла, а объемы падали
         custom_logging.info(
-            f'{pair}: CLOSE: {close[2]} > {close[1]} > {close[0]} VOL: {volume[2]} < {volume[1]} < {volume[0]} => SHORT')
+            f'{pair}: CLOSE: {close[2]} > {close[1]} > {close[0]} VOL: {volume[2]} < {volume[1]} => SHORT')
         return "SHORT"
-    elif close[2] < close[1] < close[0] and volume[2] < volume[1] < volume[0]:
+    elif close[2] < close[1] < close[0] and volume[2] < volume[1]:
         # цена 2 дня падала и объемы тоже падали
         custom_logging.info(
-            f'{pair}: CLOSE: {close[2]} < {close[1]} < {close[0]} VOL: {volume[2]} < {volume[1]} < {volume[0]} => LONG')
+            f'{pair}: CLOSE: {close[2]} < {close[1]} < {close[0]} VOL: {volume[2]} < {volume[1]} => LONG')
         return "LONG"
     return ""
 
@@ -105,7 +105,7 @@ def load_futures_history_bars_end(responce_list):
     try:
         with open(f"signals/{datetime.date.today().isoformat()}.txt", 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4, separators=(',', ': '))
-            print('History bars data  stored to file.')
+            print('Signals data  stored to file.')
             custom_logging.info(f'New signals data  stored to file "signals/{datetime.date.today().isoformat()}.txt".')
             custom_logging.info(f'**************************************************************************************')
     except Exception as e:
