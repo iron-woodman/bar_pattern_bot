@@ -1,7 +1,0 @@
-{
-    "COMPUSDT": "LONG",
-    "FLMUSDT": "SHORT",
-    "PEOPLEUSDT": "LONG",
-    "WAXPUSDT": "LONG",
-    "MBLUSDT": "LONG"
-}

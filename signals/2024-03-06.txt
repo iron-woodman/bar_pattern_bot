@@ -1,8 +1,0 @@
-{
-    "SPELLUSDT": "LONG",
-    "AMBUSDT": "LONG",
-    "SLPUSDT": "LONG",
-    "MEMEUSDT": "LONG",
-    "GLMUSDT": "LONG",
-    "AXLUSDT": "LONG"
-}
