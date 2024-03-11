@@ -140,5 +140,7 @@ cython_debug/
 
 #my project files
 .env
+
 **/logs/*.log
+
 **/signals/*.txt
